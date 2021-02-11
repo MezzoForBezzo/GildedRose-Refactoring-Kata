@@ -10,16 +10,16 @@ require_relative 'item/conjured'
 
 puts "OMGHAI!"
 items = [
-  Vest.new(name="+5 Dexterity Vest", sell_in=10, quality=20),
+  Vest.new(name="+5 Dexterity", sell_in=10, quality=20),
   AgedBrie.new(name="Aged Brie", sell_in=2, quality=0),
-  Elixir.new(name="Elixir of the Mongoose", sell_in=5, quality=7),
-  Sulfuras.new(name="Sulfuras, Hand of Ragnaros", sell_in=0, quality=80),
-  Sulfuras.new(name="Sulfuras, Hand of Ragnaros", sell_in=-1, quality=80),
+  Elixir.new(name="Mongoose", sell_in=5, quality=7),
+  Sulfuras.new(name="Hand of Ragnaros", sell_in=0, quality=80),
+  Sulfuras.new(name="Hand of Ragnaros", sell_in=-1, quality=80),
   Pass.new(name="Backstage passes to a TAFKAL80ETC concert", sell_in=15, quality=20),
   Pass.new(name="Backstage passes to a TAFKAL80ETC concert", sell_in=10, quality=49),
   Pass.new(name="Backstage passes to a TAFKAL80ETC concert", sell_in=5, quality=49),
   # This Conjured item does not work properly yet
-  Conjured.new(name="Conjured Mana Cake", sell_in=3, quality=6), # <-- :O
+  Conjured.new(name="Mana Cake", sell_in=3, quality=6), # <-- :O
 ]
 
 days = 2
