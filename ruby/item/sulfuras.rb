@@ -1,0 +1,2 @@
+class Sulfuras < Item
+end

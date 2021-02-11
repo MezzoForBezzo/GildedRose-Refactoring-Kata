@@ -1,0 +1,2 @@
+class Vest < Item
+end
