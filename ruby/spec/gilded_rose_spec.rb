@@ -15,22 +15,18 @@ end
 
 describe GildedRose do
   describe "#update_quality" do
-    let(:items) { [Item.new("foo", 0, 0)] }
-
-    it_behaves_like "a successful update"
-
     context "aged brie" do
       let(:items) {
         [
-          AgedBrie.new(name="Aged Brie", sell_in=2, quality=1),
-          AgedBrie.new(name="Aged Brie", sell_in=3, quality=3),
-          AgedBrie.new(name="Aged Brie", sell_in=4, quality=5)
+          AgedBrie.new(sell_in=2, quality=1),
+          AgedBrie.new(sell_in=3, quality=3),
+          AgedBrie.new(sell_in=4, quality=5)
         ]
       }
 
       it_behaves_like "a successful update"
 
-      it "increases the quility" do
+      it "increases the quality" do
         items.each do |item|
           quality = item.quality
           GildedRose.new(items).update_quality()
@@ -42,9 +38,9 @@ describe GildedRose do
     context "conjured" do
       let(:items) {
         [
-          Conjured.new(name="Conjured Mana Cake", sell_in=2, quality=1),
-          Conjured.new(name="Conjured Mana Cake", sell_in=3, quality=6),
-          Conjured.new("Conjured Mana Cake", sell_in=4, quality=10)
+          Conjured.new(name="Mana Cake 1", sell_in=2, quality=1),
+          Conjured.new(name="Mana Cake 2", sell_in=3, quality=6),
+          Conjured.new(name="Mana Cake 3", sell_in=4, quality=10)
         ]
       }
 
